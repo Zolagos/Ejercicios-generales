@@ -1,0 +1,50 @@
+menu = "" 
+c = 3
+coders = {
+    1: {
+        "id": 1048229292,
+        "nombre": "Jander",
+        "apellido": "Arguello",
+        "edad": 30,
+        "nvlIngles": "-A0"
+    },
+    2: {
+        "id": 1048229296,
+        "nombre": "Luisa",
+        "apellido": "De la Rosa",
+        "edad": 19,
+        "nvlIngles": "C30"
+    },
+    3: {
+        "id": 1048229297,
+        "nombre": "Maria",
+        "apellido": "Sanchez",
+        "edad": 19,
+        "nvlIngles": "C1"
+    }
+}
+while menu !=4:
+    menu = int(input("Escoga una opccion:\n 1.Agregar\n 2.Buscar\n 3.Eliminar\n 4.Salir\n"))
+    if menu == 1:
+        c+=1
+        id = int(input("Digite el ID: "))
+        nombre = input("Digite el nombre: ")
+        apellido = input("DIgite el apellido: ")
+        edad = int(input("Digite la edad: "))
+        nivel = input("Digite el nivel de ingles: ")
+        coders[c]= {"id":id,"nombre":nombre,"apellido":apellido,"edad":edad,"nvlIngles":nivel}
+        print(coders)
+    elif menu == 2:
+        busqueda_id = int(input("Digite el ID que desea buscar: "))
+        coder_encontrado = "No existe"
+        for llave, datos in coders.items():
+            if datos["id"] == busqueda_id:
+                coder_encontrado = datos
+        print(coder_encontrado)
+    elif menu == 3:
+        id = int(input("wich ID desea eleminar:\n"))
+        eliminar_id = None
+        for llave, datos in coders.items():
+            if datos ["id"] == id:
+                eliminar_id = llave
+        print(coders)
