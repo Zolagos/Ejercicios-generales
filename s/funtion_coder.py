@@ -28,7 +28,7 @@ def menu ():
         option = input("Write the option:\n 1.Add\n 2.Search\n 3.Remove\n 4.Exit\n")
         option = option.lower().strip()
         if option == "add":
-            add(c)
+            c = add(c)
         elif option == "search":
             search()
         elif option == "remove":
